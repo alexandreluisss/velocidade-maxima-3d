@@ -1,6 +1,7 @@
-VELOCIDADE MÁXIMA 3D V14 — BRILHO E DEFINIÇÃO
-Extraia os três arquivos e publique no Netlify.
-VISUAL: AUTO = equilíbrio; NÍTIDO = mais resolução; LEVE = mais desempenho.
-Abaixo de 24 FPS por três medições o jogo ativa o modo leve.
-CarConcept.glb deve ficar ao lado de index.html.
-Three.js é carregado via internet.
+VELOCIDADE MÁXIMA 3D V18 — BOXES E ASFALTO REAL
+
+Envie index.html, CarConcept.glb, LEIA-ME.txt e a pasta assets para a raiz do repositório GitHub.
+Não envie a pasta externa VELOCIDADE_MAXIMA_3D_V18_BOXES_ASFALTO_REAL.
+Novidades: asfalto com textura fotográfica e normal map; boxes, arquibancadas, sinalização de corrida; cenário contínuo e física mantidos.
+Teste os FPS no notebook e no smartphone.
+Texturas de asfalto provenientes do pacote Road015C_2K-JPG fornecido no ambiente de trabalho. Confirme as condições de licença antes de redistribuição pública.
