@@ -1,1 +1,5 @@
-V15: cidade contínua até 2400 m, edifícios, árvores e postes otimizados por instanciamento. Publique index.html e CarConcept.glb na RAIZ do repositório GitHub. Em seguida aguarde GitHub Pages atualizar. Teste no notebook e no celular.
+VELOCIDADE MÁXIMA 3D — V16 CIDADE INFINITA
+
+Extraia o ZIP e envie index.html, CarConcept.glb e LEIA-ME.txt diretamente à raiz do repositório GitHub.
+A cidade, fachadas, árvores, postes, placas e marcas de pista são reciclados a cada 2400 metros; o asfalto e barreiras acompanham o carro. O contador de distância não reinicia.
+Teste em 2500m, 5000m e 10000m, incluindo smartphone.
