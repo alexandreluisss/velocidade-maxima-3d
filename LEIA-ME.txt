@@ -1,6 +1,1 @@
-VELOCIDADE MÁXIMA 3D V14 — BRILHO E DEFINIÇÃO
-Extraia os três arquivos e publique no Netlify.
-VISUAL: AUTO = equilíbrio; NÍTIDO = mais resolução; LEVE = mais desempenho.
-Abaixo de 24 FPS por três medições o jogo ativa o modo leve.
-CarConcept.glb deve ficar ao lado de index.html.
-Three.js é carregado via internet.
+V15: cidade contínua até 2400 m, edifícios, árvores e postes otimizados por instanciamento. Publique index.html e CarConcept.glb na RAIZ do repositório GitHub. Em seguida aguarde GitHub Pages atualizar. Teste no notebook e no celular.
