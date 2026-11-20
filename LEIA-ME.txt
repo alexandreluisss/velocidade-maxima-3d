@@ -1,7 +1,8 @@
-VELOCIDADE MÁXIMA 3D V18 — BOXES E ASFALTO REAL
+VELOCIDADE MAXIMA 3D V19 - CIDADE REMODELADA
 
-Envie index.html, CarConcept.glb, LEIA-ME.txt e a pasta assets para a raiz do repositório GitHub.
-Não envie a pasta externa VELOCIDADE_MAXIMA_3D_V18_BOXES_ASFALTO_REAL.
-Novidades: asfalto com textura fotográfica e normal map; boxes, arquibancadas, sinalização de corrida; cenário contínuo e física mantidos.
-Teste os FPS no notebook e no smartphone.
-Texturas de asfalto provenientes do pacote Road015C_2K-JPG fornecido no ambiente de trabalho. Confirme as condições de licença antes de redistribuição pública.
+Arquivos na raiz: index.html, CarConcept.glb, LEIA-ME.txt.
+Mantenha assets/asfalto_cor.jpg e assets/asfalto_normal.jpg.
+
+V19: marquises, vitrines, varandas, letreiros e folhagem instanciados, todos incluidos no reaproveitamento infinito.
+
+Teste o jogo em notebook e smartphone. A V19 aprimora a cidade procedural, mas nao e fotorrealismo AAA.
