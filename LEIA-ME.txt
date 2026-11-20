@@ -1,5 +1,9 @@
-VELOCIDADE MÁXIMA 3D — V16 CIDADE INFINITA
+VELOCIDADE MÁXIMA 3D — V17 CENÁRIO DETALHADO
 
-Extraia o ZIP e envie index.html, CarConcept.glb e LEIA-ME.txt diretamente à raiz do repositório GitHub.
-A cidade, fachadas, árvores, postes, placas e marcas de pista são reciclados a cada 2400 metros; o asfalto e barreiras acompanham o carro. O contador de distância não reinicia.
-Teste em 2500m, 5000m e 10000m, incluindo smartphone.
+Atualização incremental da V16: cinco variações de fachadas com vidros e textura, copas de árvores em múltiplos volumes, acabamentos de pista, mantendo cidade infinita, carro e controles.
+
+Extraia e envie os arquivos index.html, CarConcept.glb e LEIA-ME.txt à raiz do repositório GitHub.
+
+TESTES: confirme V17, percorra mais de 2500 m, observe FPS em AUTO/NÍTIDO/LEVE e teste em celular.
+
+O cenário é uma evolução procedural, não modelos fotográficos de arquitetura. O jogo depende da internet para carregar Three.js.
