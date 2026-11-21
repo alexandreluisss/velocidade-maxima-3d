@@ -1,4 +1,4 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><title>Velocidade Máxima 3D | Circuito Urbano V19</title><style>
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><title>Velocidade Máxima 3D | Circuito Urbano V20</title><style>
 *{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#0b0e17;color:#fff;font-family:Inter,system-ui,Arial,sans-serif}canvas{display:block}#ui{position:fixed;inset:0;pointer-events:none} .glass{background:rgba(8,13,25,.40);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.19);box-shadow:0 8px 30px #0005;border-radius:12px}#brand{position:absolute;top:15px;left:18px;padding:11px 15px;border-left:3px solid #fa3d43;font-size:clamp(14px,2vw,23px);font-style:italic;font-weight:950;letter-spacing:.035em;text-shadow:0 2px 6px #000}#brand b{color:#ff454c}#brand small{display:block;font-size:9px;font-style:normal;font-weight:600;color:#dfdce3;letter-spacing:.1em;margin-top:3px}#school{position:absolute;top:16px;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:.12em;padding:9px 14px;white-space:nowrap}#mission{position:absolute;top:110px;left:18px;padding:13px 15px;width:min(300px,42vw);font-size:12px;line-height:1.5}#mission strong{display:block;color:#ffe6a0;font-size:12px;margin-bottom:3px}#stats{position:absolute;bottom:18px;left:18px;padding:10px 15px;display:flex;gap:16px;font-size:10px;color:#b8c9d8}#stats b{display:block;color:white;font-size:18px}#speedo{position:absolute;bottom:18px;right:18px;width:170px;height:170px;border:5px solid #e8eef0b8;border-left-color:#7c8b9f;border-bottom-color:#f0444b;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-direction:column;background:rgba(7,12,20,.23);box-shadow:0 4px 25px #0005,inset 0 0 15px #0004;text-shadow:0 3px 9px #000}#speed{font-size:57px;font-weight:850;line-height:1}#speedo small{font-size:13px;font-weight:650}#speedo .needle{position:absolute;bottom:17px;font-size:10px;color:#ffc671}#topButtons{position:absolute;top:18px;right:18px;display:flex;gap:8px;pointer-events:auto}button{background:rgba(8,17,29,.65);border:1px solid #d5e7f38c;border-radius:9px;color:white;font-size:12px;font-weight:800;padding:10px 13px;cursor:pointer;touch-action:none;user-select:none;backdrop-filter:blur(8px)}button:active{background:#b12e38}#controls{position:absolute;bottom:17px;left:50%;transform:translateX(-50%);display:flex;gap:8px;pointer-events:auto}#gas{background:#087c58b8}#brake{background:#ac2834c4}#hint{position:absolute;bottom:7px;left:50%;transform:translateX(-50%);font-size:9px;color:#fff8;text-shadow:0 1px 2px #000}#loading{position:fixed;inset:0;z-index:10;background:#070d19f5;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px}#loading div{max-width:540px}#loading h2{font-size:23px}#loading p{line-height:1.5;color:#c8d3e5}#loading a{color:#87dcff}body.minimal #brand,body.minimal #school,body.minimal #mission,body.minimal #stats,body.minimal #hint{display:none}@media(max-width:800px){#school{display:none}#brand{font-size:14px}#mission{top:78px;width:210px;font-size:10px}#stats{bottom:80px;gap:9px;padding:7px}#stats b{font-size:14px}#speedo{width:112px;height:112px;bottom:75px;right:10px;border-width:3px}#speed{font-size:38px}#controls{bottom:12px}#controls button{padding:11px 9px;font-size:11px}#topButtons{top:72px;right:10px}#hint{display:none}}
 
 button{backdrop-filter:blur(15px);box-shadow:0 4px 20px #0005}#speedometer{background:rgba(4,12,22,.22)!important}canvas{display:block} 
@@ -11,7 +11,7 @@ button{backdrop-filter:blur(15px);box-shadow:0 4px 20px #0005}#speedometer{backg
 @media(max-height:460px){#brand{top:5px;left:8px;padding:6px;font-size:13px}#mission{display:none}#stats{bottom:66px;padding:5px 8px}#stats b{font-size:12px}#graphPanel{top:50px;width:210px}#graph{height:64px}#speedo{bottom:70px;width:85px;height:85px}#speed{font-size:28px}#controls button{min-height:42px}#school{display:none}}
 </style><script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.164.1/examples/jsm/"}}</script></head><body>
 <div id="loading"><div><h2>🏎️ VELOCIDADE MÁXIMA · CIRCUITO URBANO</h2><p id="loadText">Carregando o modelo 3D CarConcept e preparando o circuito...</p></div></div>
-<div id="ui"><div id="brand" class="glass">VELOCIDADE MÁXIMA <b>3D</b><small>SIMULADOR DE MOVIMENTO VARIADO • V19</small></div><div id="school" class="glass">ECI CASSIANO RIBEIRO COUTINHO · PROF. ALEXANDRE LUIS</div><div id="mission" class="glass"><strong id="missionTitle">MISSÃO 01 · ACELERE!</strong><span id="missionBody">Alcance 108 km/h (30 m/s) na reta e observe a velocidade e a distância.</span></div><div id="stats" class="glass"><span>ACELERAÇÃO<b id="acc">0,0</b>m/s²</span><span>DISTÂNCIA<b id="distance">0</b>metros</span><span>TEMPO<b id="time">0,0</b>segundos</span></div><div id="speedo"><div id="speed">0</div><small>km/h</small><div class="needle">MUV · FÍSICA</div></div><div id="topButtons"><button id="hud">HUD MÍNIMO</button><button id="quality">VISUAL: AUTO</button></div><div id="controls"><button id="left">◀</button><button id="brake">FREAR</button><button id="gas">ACELERAR</button><button id="right">▶</button><button id="cam">CÂMERA</button><button id="restart">↻</button></div><div id="graphPanel"><div class="head"><strong>GRÁFICO DA FUNÇÃO</strong><button id="graphReset" title="Reiniciar coleta de dados" style="padding:4px 7px;font-size:10px">↻ DADOS</button><select id="graphType" aria-label="Tipo de gráfico"><option value="v">v × t</option><option value="s">s × t</option></select></div><canvas id="graph" width="680" height="264"></canvas><div class="foot" id="graphCaption">Velocidade (m/s) × tempo (s)</div></div><div id="fps">FPS: --</div><div id="qualityNotice" aria-live="polite"></div><div id="hint">W/↑ acelerar · S/↓ frear · A/D direção · C câmera · H HUD · R reiniciar</div></div>
+<div id="ui"><div id="brand" class="glass">VELOCIDADE MÁXIMA <b>3D</b><small>SIMULADOR DE MOVIMENTO VARIADO • V20</small></div><div id="school" class="glass">ECI CASSIANO RIBEIRO COUTINHO · PROF. ALEXANDRE LUIS</div><div id="mission" class="glass"><strong id="missionTitle">MISSÃO 01 · ACELERE!</strong><span id="missionBody">Alcance 108 km/h (30 m/s) na reta e observe a velocidade e a distância.</span></div><div id="stats" class="glass"><span>ACELERAÇÃO<b id="acc">0,0</b>m/s²</span><span>DISTÂNCIA<b id="distance">0</b>metros</span><span>TEMPO<b id="time">0,0</b>segundos</span></div><div id="speedo"><div id="speed">0</div><small>km/h</small><div class="needle">MUV · FÍSICA</div></div><div id="topButtons"><button id="hud">HUD MÍNIMO</button><button id="quality">VISUAL: AUTO</button></div><div id="controls"><button id="left">◀</button><button id="brake">FREAR</button><button id="gas">ACELERAR</button><button id="right">▶</button><button id="cam">CÂMERA</button><button id="restart">↻</button></div><div id="graphPanel"><div class="head"><strong>GRÁFICO DA FUNÇÃO</strong><button id="graphReset" title="Reiniciar coleta de dados" style="padding:4px 7px;font-size:10px">↻ DADOS</button><select id="graphType" aria-label="Tipo de gráfico"><option value="v">v × t</option><option value="s">s × t</option></select></div><canvas id="graph" width="680" height="264"></canvas><div class="foot" id="graphCaption">Velocidade (m/s) × tempo (s)</div></div><div id="fps">FPS: --</div><div id="qualityNotice" aria-live="polite"></div><div id="hint">W/↑ acelerar · S/↓ frear · A/D direção · C câmera · H HUD · R reiniciar</div></div>
 <script type="module">
 import * as THREE from 'three';import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';import {KTX2Loader} from 'three/addons/loaders/KTX2Loader.js';import {RoomEnvironment} from 'three/addons/environments/RoomEnvironment.js';
 const $=id=>document.getElementById(id), scene=new THREE.Scene(), renderer=new THREE.WebGLRenderer({antialias:true,powerPreference:'high-performance'});renderer.setSize(innerWidth,innerHeight);renderer.setPixelRatio(Math.min(devicePixelRatio,matchMedia("(pointer:coarse)").matches?.78:.92));renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.13;renderer.shadowMap.enabled=false;renderer.shadowMap.type=THREE.PCFSoftShadowMap;document.body.prepend(renderer.domElement);
@@ -228,6 +228,55 @@ for(let j=0;j<v19Names.length;j++){
  inst.count=count;inst.instanceMatrix.needsUpdate=true;inst.frustumCulled=false;scene.add(inst);v19Signs.push(inst);
 }
 
+// V20 — quadras com volumes arquitetonicos e paisagismo otimizado.
+// Os novos objetos sao instanciados e participam da reciclagem infinita.
+// Ocultamos varandas antigas que pareciam flutuar sem sustentacao.
+v19Balcony.visible=false;
+const v20Stone=material('#d5d0c7',.88),v20Dark=material('#333b43',.62,.18),v20Bronze=material('#a98b69',.52,.22);
+const v20Roofs=new THREE.InstancedMesh(new THREE.BoxGeometry(1,1,1),v20Dark,blockCount);
+const v20Columns=new THREE.InstancedMesh(new THREE.BoxGeometry(1,1,1),v20Stone,blockCount*4);
+const v20Doors=new THREE.InstancedMesh(new THREE.BoxGeometry(1,1,1),v20Bronze,blockCount);
+const v20Cornices=new THREE.InstancedMesh(new THREE.BoxGeometry(1,1,1),v20Stone,blockCount*2);
+let v20C=0,v20E=0;
+for(let i=0;i<blockCount;i++){
+ const side=i%2===0?-1:1,row=Math.floor(i/2),z=12-row*51;
+ // A mesma altura e largura utilizadas na base, sem alterar a fisica da pista.
+ const h=17+(row*13%12),face=side*15.9;
+ v19Place(v20Roofs,i,side*25,h+.45,z,16,.9,22);
+ v20Roofs.setColorAt(i,new THREE.Color(['#404851','#6b6661','#514943','#343e48'][row%4]));
+ for(let j=0;j<4;j++){
+  v19Place(v20Columns,v20C++,face-side*.38,3.25,z-8+j*5.3,.55,6.5,.48);
+ }
+ v19Place(v20Doors,i,face-side*.5,1.35,z-2.1,.24,2.7,2.6);
+ for(let j=0;j<2;j++){
+  v19Place(v20Cornices,v20E++,face-side*.55,6.7+j*5.2,z,.45,.34,20.5);
+ }
+}
+for(const obj of [v20Roofs,v20Columns,v20Doors,v20Cornices]){
+ obj.instanceMatrix.needsUpdate=true;obj.frustumCulled=false;scene.add(obj);
+}
+// Copas assimetricas em varios tamanhos, com troncos ramificados.
+const v20Branches=new THREE.InstancedMesh(new THREE.CylinderGeometry(.045,.12,1,5),material('#66533f'),trees*3);
+const v20Leaves=new THREE.InstancedMesh(new THREE.IcosahedronGeometry(1,1),material('#4e7749',.98),trees*5);
+for(let i=0;i<trees;i++){
+ const side=i%2?-1:1,z=15-Math.floor(i/2)*37,x=side*(17.3+(i%4)*.2);
+ for(let j=0;j<3;j++){
+  const a=j*Math.PI*2/3+i*.23;
+  v19Place(v20Branches,i*3+j,x+Math.cos(a)*.62,5.9,z+Math.sin(a)*.62,.9,3.0,.9);
+  const m=new THREE.Matrix4();v20Branches.getMatrixAt(i*3+j,m);
+  const q=new THREE.Quaternion().setFromEuler(new THREE.Euler(Math.sin(a)*.45,0,-Math.cos(a)*.45));
+  const t=new THREE.Vector3(),r=new THREE.Quaternion(),sc=new THREE.Vector3();m.decompose(t,r,sc);r.multiply(q);m.compose(t,r,sc);v20Branches.setMatrixAt(i*3+j,m);
+ }
+ for(let j=0;j<5;j++){
+  const a=j*2.399963+i*.12,r=1.25+(j%2)*.65;
+  v19Place(v20Leaves,i*5+j,x+Math.cos(a)*r,7.3+(j%3)*.56,z+Math.sin(a)*r,1.12+(j%2)*.4,1.2+(j%3)*.28,1.15+(j%2)*.25);
+  v20Leaves.setColorAt(i*5+j,new THREE.Color(['#3c6540','#4d7546','#617d4d','#355c3c','#718956'][(i+j)%5]));
+ }
+}
+for(const obj of [v20Branches,v20Leaves]){obj.instanceMatrix.needsUpdate=true;obj.frustumCulled=false;scene.add(obj)}
+// Ajustes de distancia: so se mantem no campo de visao o conjunto reciclado.
+const v20Instances=[v20Roofs,v20Columns,v20Doors,v20Cornices,v20Branches,v20Leaves];
+
 // V16 — cenário infinito por reciclagem de instâncias, sem criar objetos durante a corrida.
 // Mantém os objetos entre 80 m atrás e 2320 m à frente do carro.
 const WORLD_PERIOD=2400;
@@ -238,7 +287,7 @@ for(const obj of [...scene.children]){
  }
 }
 const worldInstanced=[];
-for(const obj of [blocks,...frontGroups,shops,trunks,canopies,leafClusters,poles,lanes,curbDetails,v19Frame,v19Balcony,v19AwningMesh,v19Window,v19Foliage,...v19Signs]){
+for(const obj of [blocks,...frontGroups,shops,trunks,canopies,leafClusters,poles,lanes,curbDetails,v19Frame,v19Balcony,v19AwningMesh,v19Window,v19Foliage,...v19Signs,...v20Instances]){
  const original=[];
  const matrix=new THREE.Matrix4();
  for(let i=0;i<obj.count;i++){
