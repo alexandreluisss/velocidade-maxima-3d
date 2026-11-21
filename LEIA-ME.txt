@@ -1,8 +1,8 @@
-VELOCIDADE MAXIMA 3D V19 - CIDADE REMODELADA
+V25 - QUARTEIRAO PILOTO 3D
 
-Arquivos na raiz: index.html, CarConcept.glb, LEIA-ME.txt.
-Mantenha assets/asfalto_cor.jpg e assets/asfalto_normal.jpg.
-
-V19: marquises, vitrines, varandas, letreiros e folhagem instanciados, todos incluidos no reaproveitamento infinito.
-
-Teste o jogo em notebook e smartphone. A V19 aprimora a cidade procedural, mas nao e fotorrealismo AAA.
+Abra esta pasta no VS Code e execute index.html via Go Live.
+Inclui 3 edificios originais em GLB com geometria 3D de fachadas, vitrines, janelas laterais, sacadas e telhados.
+O trecho inicial de ~165 metros usa os novos modelos; o restante da cidade mantem o cenario V24.
+NAO e fotorrealismo final. Nao publicar antes de avaliar desempenho.
+Os modelos de edificio foram criados para este projeto; sem dependencia de licencas externas.
+O CarConcept.glb continua com sua licenca original.

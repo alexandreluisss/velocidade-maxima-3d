@@ -1,4 +1,4 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><title>Velocidade Máxima 3D | Circuito Urbano V21</title><style>
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><title>Velocidade Máxima 3D | Circuito Urbano V24</title><style>
 *{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#0b0e17;color:#fff;font-family:Inter,system-ui,Arial,sans-serif}canvas{display:block}#ui{position:fixed;inset:0;pointer-events:none} .glass{background:rgba(8,13,25,.40);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.19);box-shadow:0 8px 30px #0005;border-radius:12px}#brand{position:absolute;top:15px;left:18px;padding:11px 15px;border-left:3px solid #fa3d43;font-size:clamp(14px,2vw,23px);font-style:italic;font-weight:950;letter-spacing:.035em;text-shadow:0 2px 6px #000}#brand b{color:#ff454c}#brand small{display:block;font-size:9px;font-style:normal;font-weight:600;color:#dfdce3;letter-spacing:.1em;margin-top:3px}#school{position:absolute;top:16px;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:.12em;padding:9px 14px;white-space:nowrap}#mission{position:absolute;top:110px;left:18px;padding:13px 15px;width:min(300px,42vw);font-size:12px;line-height:1.5}#mission strong{display:block;color:#ffe6a0;font-size:12px;margin-bottom:3px}#stats{position:absolute;bottom:18px;left:18px;padding:10px 15px;display:flex;gap:16px;font-size:10px;color:#b8c9d8}#stats b{display:block;color:white;font-size:18px}#speedo{position:absolute;bottom:18px;right:18px;width:170px;height:170px;border:5px solid #e8eef0b8;border-left-color:#7c8b9f;border-bottom-color:#f0444b;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-direction:column;background:rgba(7,12,20,.23);box-shadow:0 4px 25px #0005,inset 0 0 15px #0004;text-shadow:0 3px 9px #000}#speed{font-size:57px;font-weight:850;line-height:1}#speedo small{font-size:13px;font-weight:650}#speedo .needle{position:absolute;bottom:17px;font-size:10px;color:#ffc671}#topButtons{position:absolute;top:18px;right:18px;display:flex;gap:8px;pointer-events:auto}button{background:rgba(8,17,29,.65);border:1px solid #d5e7f38c;border-radius:9px;color:white;font-size:12px;font-weight:800;padding:10px 13px;cursor:pointer;touch-action:none;user-select:none;backdrop-filter:blur(8px)}button:active{background:#b12e38}#controls{position:absolute;bottom:17px;left:50%;transform:translateX(-50%);display:flex;gap:8px;pointer-events:auto}#gas{background:#087c58b8}#brake{background:#ac2834c4}#hint{position:absolute;bottom:7px;left:50%;transform:translateX(-50%);font-size:9px;color:#fff8;text-shadow:0 1px 2px #000}#loading{position:fixed;inset:0;z-index:10;background:#070d19f5;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px}#loading div{max-width:540px}#loading h2{font-size:23px}#loading p{line-height:1.5;color:#c8d3e5}#loading a{color:#87dcff}body.minimal #brand,body.minimal #school,body.minimal #mission,body.minimal #stats,body.minimal #hint{display:none}@media(max-width:800px){#school{display:none}#brand{font-size:14px}#mission{top:78px;width:210px;font-size:10px}#stats{bottom:80px;gap:9px;padding:7px}#stats b{font-size:14px}#speedo{width:112px;height:112px;bottom:75px;right:10px;border-width:3px}#speed{font-size:38px}#controls{bottom:12px}#controls button{padding:11px 9px;font-size:11px}#topButtons{top:72px;right:10px}#hint{display:none}}
 
 button{backdrop-filter:blur(15px);box-shadow:0 4px 20px #0005}#speedometer{background:rgba(4,12,22,.22)!important}canvas{display:block} 
@@ -11,7 +11,7 @@ button{backdrop-filter:blur(15px);box-shadow:0 4px 20px #0005}#speedometer{backg
 @media(max-height:460px){#brand{top:5px;left:8px;padding:6px;font-size:13px}#mission{display:none}#stats{bottom:66px;padding:5px 8px}#stats b{font-size:12px}#graphPanel{top:50px;width:210px}#graph{height:64px}#speedo{bottom:70px;width:85px;height:85px}#speed{font-size:28px}#controls button{min-height:42px}#school{display:none}}
 </style><script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.164.1/examples/jsm/"}}</script></head><body>
 <div id="loading"><div><h2>🏎️ VELOCIDADE MÁXIMA · CIRCUITO URBANO</h2><p id="loadText">Carregando o modelo 3D CarConcept e preparando o circuito...</p></div></div>
-<div id="ui"><div id="brand" class="glass">VELOCIDADE MÁXIMA <b>3D</b><small>SIMULADOR DE MOVIMENTO VARIADO • V21</small></div><div id="school" class="glass">ECI CASSIANO RIBEIRO COUTINHO · PROF. ALEXANDRE LUIS</div><div id="mission" class="glass"><strong id="missionTitle">MISSÃO 01 · ACELERE!</strong><span id="missionBody">Alcance 108 km/h (30 m/s) na reta e observe a velocidade e a distância.</span></div><div id="stats" class="glass"><span>ACELERAÇÃO<b id="acc">0,0</b>m/s²</span><span>DISTÂNCIA<b id="distance">0</b>metros</span><span>TEMPO<b id="time">0,0</b>segundos</span></div><div id="speedo"><div id="speed">0</div><small>km/h</small><div class="needle">MUV · FÍSICA</div></div><div id="topButtons"><button id="hud">HUD MÍNIMO</button><button id="quality">VISUAL: AUTO</button></div><div id="controls"><button id="left">◀</button><button id="brake">FREAR</button><button id="gas">ACELERAR</button><button id="right">▶</button><button id="cam">CÂMERA</button><button id="restart">↻</button></div><div id="graphPanel"><div class="head"><strong>GRÁFICO DA FUNÇÃO</strong><button id="graphReset" title="Reiniciar coleta de dados" style="padding:4px 7px;font-size:10px">↻ DADOS</button><select id="graphType" aria-label="Tipo de gráfico"><option value="v">v × t</option><option value="s">s × t</option></select></div><canvas id="graph" width="680" height="264"></canvas><div class="foot" id="graphCaption">Velocidade (m/s) × tempo (s)</div></div><div id="fps">FPS: --</div><div id="qualityNotice" aria-live="polite"></div><div id="hint">W/↑ acelerar · S/↓ frear · A/D direção · C câmera · H HUD · R reiniciar</div></div>
+<div id="ui"><div id="brand" class="glass">VELOCIDADE MÁXIMA <b>3D</b><small>SIMULADOR DE MOVIMENTO VARIADO • V25</small></div><div id="school" class="glass">ECI CASSIANO RIBEIRO COUTINHO · PROF. ALEXANDRE LUIS</div><div id="mission" class="glass"><strong id="missionTitle">MISSÃO 01 · ACELERE!</strong><span id="missionBody">Alcance 108 km/h (30 m/s) na reta e observe a velocidade e a distância.</span></div><div id="stats" class="glass"><span>ACELERAÇÃO<b id="acc">0,0</b>m/s²</span><span>DISTÂNCIA<b id="distance">0</b>metros</span><span>TEMPO<b id="time">0,0</b>segundos</span></div><div id="speedo"><div id="speed">0</div><small>km/h</small><div class="needle">MUV · FÍSICA</div></div><div id="topButtons"><button id="hud">HUD MÍNIMO</button><button id="quality">VISUAL: AUTO</button></div><div id="controls"><button id="left">◀</button><button id="brake">FREAR</button><button id="gas">ACELERAR</button><button id="right">▶</button><button id="cam">CÂMERA</button><button id="restart">↻</button></div><div id="graphPanel"><div class="head"><strong>GRÁFICO DA FUNÇÃO</strong><button id="graphReset" title="Reiniciar coleta de dados" style="padding:4px 7px;font-size:10px">↻ DADOS</button><select id="graphType" aria-label="Tipo de gráfico"><option value="v">v × t</option><option value="s">s × t</option></select></div><canvas id="graph" width="680" height="264"></canvas><div class="foot" id="graphCaption">Velocidade (m/s) × tempo (s)</div></div><div id="fps">FPS: --</div><div id="qualityNotice" aria-live="polite"></div><div id="hint">W/↑ acelerar · S/↓ frear · A/D direção · C câmera · H HUD · R reiniciar</div></div>
 <script type="module">
 import * as THREE from 'three';import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';import {KTX2Loader} from 'three/addons/loaders/KTX2Loader.js';import {RoomEnvironment} from 'three/addons/environments/RoomEnvironment.js';
 const $=id=>document.getElementById(id), scene=new THREE.Scene(), renderer=new THREE.WebGLRenderer({antialias:true,powerPreference:'high-performance'});renderer.setSize(innerWidth,innerHeight);renderer.setPixelRatio(Math.min(devicePixelRatio,matchMedia("(pointer:coarse)").matches?.78:.92));renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.13;renderer.shadowMap.enabled=false;renderer.shadowMap.type=THREE.PCFSoftShadowMap;document.body.prepend(renderer.domElement);
@@ -277,70 +277,119 @@ for(const obj of [v20Branches,v20Leaves]){obj.instanceMatrix.needsUpdate=true;ob
 // Ajustes de distancia: so se mantem no campo de visao o conjunto reciclado.
 const v20Instances=[v20Roofs,v20Columns,v20Doors,v20Cornices,v20Branches,v20Leaves];
 
-// V21 — primeiro trecho remodelado: vegetação com silhueta foliar e arquitetura em camadas.
-// Objetos instanciados para evitar centenas de draw calls adicionais.
-// Oculta as copas poliédricas antigas, mantendo os troncos e galhos.
-canopies.visible=false;leafClusters.visible=false;v19Foliage.visible=false;v20Leaves.visible=false;
-function makeFoliageAtlas(){
- const cv=document.createElement('canvas');cv.width=cv.height=256;
- const g=cv.getContext('2d');
- // Folhagem desenhada uma vez, com recortes transparentes e iluminação interna.
- let randomSeed=8347;const rand=()=>{randomSeed=(randomSeed*1664525+1013904223)>>>0;return randomSeed/4294967296};
- for(let i=0;i<340;i++){
-   const angle=rand()*Math.PI*2,r=Math.sqrt(rand())*105;
-   const x=128+Math.cos(angle)*r,y=130+Math.sin(angle)*r*.85;
-   const size=5+rand()*11;
-   g.save();g.translate(x,y);g.rotate(rand()*Math.PI);
-   g.fillStyle=['#2f5535','#446e3f','#567d49','#718a54','#365f39','#8a9b62'][Math.floor(rand()*6)];
-   g.beginPath();g.ellipse(0,0,size*.57,size,0,0,Math.PI*2);g.fill();
-   g.strokeStyle='rgba(195,210,147,.23)';g.beginPath();g.moveTo(0,-size*.8);g.lineTo(0,size*.8);g.stroke();g.restore();
+
+// V24: substituicao VISUAL real das fachadas e arvores antigas, sem duplicar a geometria.
+// Materiais gerados localmente, sem downloads adicionais e com poucos draw calls.
+for(const old of [blocks,...frontGroups,shops,trunks,canopies,leafClusters,v19Frame,v19Balcony,v19AwningMesh,v19Window,v19Foliage,...v19Signs,...v20Instances])old.visible=false;
+const v24NewInstances=[];
+const v24Colors=['#b6a69b','#c4b9ac','#a7a9a7','#d0bca9'];
+function v24FacadeTexture(style){
+ const c=document.createElement('canvas');c.width=768;c.height=1024;const g=c.getContext('2d');
+ const base=v24Colors[style];g.fillStyle=base;g.fillRect(0,0,768,1024);
+ // Imperfeicoes de reboco e faixas de concreto: textura, nao milhares de malhas.
+ for(let i=0;i<24000;i++){const x=rnd()*768,y=rnd()*1024;g.fillStyle=rnd()>.5?'rgba(255,255,255,.035)':'rgba(34,30,29,.038)';g.fillRect(x,y,1+rnd()*4,1+rnd()*4)}
+ const floorH=150;
+ for(let f=0;f<6;f++){
+  const y=20+f*floorH;
+  g.fillStyle='#6b6663';g.fillRect(0,y+119,768,9);g.fillStyle='rgba(255,255,255,.40)';g.fillRect(0,y+129,768,4);
+  for(let j=0;j<5;j++){
+   const x=23+j*150;
+   g.fillStyle='#565a5c';g.fillRect(x-7,y-7,127,113);
+   const sky=g.createLinearGradient(x,y,x+115,y+105);sky.addColorStop(0,'#9cb5c2');sky.addColorStop(.48,'#365268');sky.addColorStop(1,'#1d3041');
+   g.fillStyle=sky;g.fillRect(x,y,114,99);
+   g.fillStyle='rgba(240,245,246,.40)';g.fillRect(x+6,y+4,3,88);g.fillRect(x+57,y,5,99);
+   g.fillStyle='rgba(255,255,255,.19)';g.beginPath();g.moveTo(x+10,y+3);g.lineTo(x+44,y+3);g.lineTo(x+16,y+95);g.lineTo(x+3,y+95);g.fill();
+   g.fillStyle='#d3cbc0';g.fillRect(x-8,y+99,130,8);
+  }
  }
- const t=new THREE.CanvasTexture(cv);t.colorSpace=THREE.SRGBColorSpace;t.anisotropy=2;return t;
-}
-const foliageTexture=makeFoliageAtlas();
-const foliageMaterial=new THREE.MeshStandardMaterial({map:foliageTexture,transparent:false,alphaTest:.38,side:THREE.DoubleSide,roughness:1,depthWrite:true});
-const foliageCards=new THREE.InstancedMesh(new THREE.PlaneGeometry(1,1),foliageMaterial,trees*3);
-for(let i=0;i<trees;i++){
- const side=i%2?-1:1,z=15-Math.floor(i/2)*37,x=side*(17.3+(i%4)*.2);
- for(let k=0;k<3;k++){
-   dummy.position.set(x,7.45,z);dummy.rotation.set(0,k*Math.PI/3,0);
-   dummy.scale.set(6.1+(i%3)*.45,6.7+(i%4)*.35,1);dummy.updateMatrix();foliageCards.setMatrixAt(i*3+k,dummy.matrix);
- }
-}
-foliageCards.instanceMatrix.needsUpdate=true;foliageCards.frustumCulled=false;scene.add(foliageCards);
-// Camadas arquitetônicas mais plausíveis: vitrines de térreo, toldos e molduras.
-// Uma fachada diferente por bloco, evitando o excesso de geometria solta.
-function makeShopfrontTexture(style){
- const c=document.createElement('canvas');c.width=512;c.height=256;const g=c.getContext('2d');
- const wall=['#8d8178','#656e73','#a18b78','#737c78'][style%4];
- g.fillStyle=wall;g.fillRect(0,0,512,256);
+ // Piso terreo: vitrines de lojas e portas com marquise e letreiro.
+ g.fillStyle='#353d43';g.fillRect(0,916,768,108);
  for(let j=0;j<4;j++){
-   const x=12+j*125;
-   const grad=g.createLinearGradient(x,30,x+105,205);
-   grad.addColorStop(0,'#9ab1b6');grad.addColorStop(.35,'#344c59');grad.addColorStop(1,'#172b37');
-   g.fillStyle='#c2b6a6';g.fillRect(x-5,25,113,189);
-   g.fillStyle=grad;g.fillRect(x,31,103,176);
-   g.fillStyle='rgba(237,231,213,.22)';g.beginPath();g.moveTo(x+12,31);g.lineTo(x+36,31);g.lineTo(x+90,207);g.lineTo(x+65,207);g.fill();
-   g.fillStyle='#a8a59d';g.fillRect(x+49,31,4,176);
-   g.fillStyle='#44474b';g.fillRect(x-4,208,112,8);
+  const x=14+j*190;g.fillStyle='#1b3644';g.fillRect(x,931,169,85);
+  g.fillStyle='rgba(178,219,231,.30)';g.fillRect(x+5,935,4,76);g.fillRect(x+82,931,5,85);
+  g.fillStyle='rgba(255,255,255,.20)';g.fillRect(x+15,938,22,65);
  }
- g.fillStyle='#33373d';g.fillRect(0,0,512,22);
+ g.fillStyle=['#793f35','#384d53','#435a4e','#534a49'][style];g.fillRect(0,893,768,30);
+ const tex=new THREE.CanvasTexture(c);tex.colorSpace=THREE.SRGBColorSpace;tex.anisotropy=Math.min(4,renderer.capabilities.getMaxAnisotropy());return tex;
+}
+const v24FacadeMats=Array.from({length:4},(_,i)=>new THREE.MeshStandardMaterial({map:v24FacadeTexture(i),roughness:.78,metalness:.06,side:THREE.DoubleSide}));
+const v24Faces=v24FacadeMats.map(m=>new THREE.InstancedMesh(new THREE.PlaneGeometry(1,1),m,blockCount/4));
+const v24Buildings=new THREE.InstancedMesh(new THREE.BoxGeometry(1,1,1),material('#b9aea2'),blockCount);
+const v24Roof=new THREE.InstancedMesh(new THREE.BoxGeometry(1,1,1),material('#444c52'),blockCount);
+const v24Counters=[0,0,0,0];
+for(let i=0;i<blockCount;i++){
+ const side=i%2===0?-1:1,row=Math.floor(i/2),z=12-row*51;
+ const h=15+(row%5)*2.8,w=15.5,depth=22,x=side*25;
+ v19Place(v24Buildings,i,x,h/2,z,w,h,depth);
+ v24Buildings.setColorAt(i,new THREE.Color(v24Colors[row%4]));
+ v19Place(v24Roof,i,x,h+.14,z,w+.5,.28,depth+.5);
+ dummy.position.set(x-side*(w/2+.035),h/2,z);dummy.rotation.set(0,side===1?-Math.PI/2:Math.PI/2,0);dummy.scale.set(depth,h,1);dummy.updateMatrix();v24Faces[row%4].setMatrixAt(v24Counters[row%4]++,dummy.matrix);
+}
+for(let j=0;j<4;j++){v24Faces[j].count=v24Counters[j];v24Faces[j].instanceMatrix.needsUpdate=true;v24Faces[j].frustumCulled=false;scene.add(v24Faces[j]);v24NewInstances.push(v24Faces[j])}
+for(const o of [v24Buildings,v24Roof]){o.instanceMatrix.needsUpdate=true;o.frustumCulled=false;scene.add(o);v24NewInstances.push(o)}
+// Silhueta de copa folhosa em alpha, cruzada em duas direcoes para volume leve.
+function v24TreeTexture(){
+ const c=document.createElement('canvas');c.width=256;c.height=512;const g=c.getContext('2d');
+ g.clearRect(0,0,256,512);
+ g.fillStyle='#5a4533';g.beginPath();g.moveTo(117,508);g.lineTo(113,250);g.lineTo(135,245);g.lineTo(139,508);g.fill();
+ for(let k=0;k<9;k++){const a=k*2.399,r=18+(k%3)*13,x=126+Math.cos(a)*r,y=315+Math.sin(a)*r;g.strokeStyle='#594632';g.lineWidth=7;g.beginPath();g.moveTo(126,370);g.lineTo(x,y);g.stroke()}
+ const colors=['#2f5338','#426a43','#537b4b','#698c52','#3c6541'];
+ for(let i=0;i<115;i++){const a=rnd()*Math.PI*2,r=Math.sqrt(rnd()),x=126+Math.cos(a)*r*94,y=222+Math.sin(a)*r*174;
+  const rad=12+rnd()*22;g.fillStyle=colors[Math.floor(rnd()*colors.length)];g.beginPath();g.ellipse(x,y,rad,rad*.73,rnd()*3,0,Math.PI*2);g.fill();
+ }
  const tex=new THREE.CanvasTexture(c);tex.colorSpace=THREE.SRGBColorSpace;return tex;
 }
-const shopfrontGroups=[];
-for(let style=0;style<4;style++){
- const mat=new THREE.MeshStandardMaterial({map:makeShopfrontTexture(style),side:THREE.DoubleSide,roughness:.46,metalness:.08});
- const inst=new THREE.InstancedMesh(new THREE.PlaneGeometry(1,1),mat,Math.ceil(blockCount/4));let count=0;
- for(let i=style;i<blockCount;i+=4){
-   const side=i%2===0?-1:1,row=Math.floor(i/2),z=12-row*51;
-   // Próximo ao alinhamento das fachadas, à altura das lojas.
-   dummy.position.set(side*15.62,2.9,z);dummy.rotation.set(0,side===1?-Math.PI/2:Math.PI/2,0);
-   dummy.scale.set(19.3,5.5,1);dummy.updateMatrix();inst.setMatrixAt(count++,dummy.matrix);
+const v24TreeMat=new THREE.MeshBasicMaterial({map:v24TreeTexture(),transparent:true,alphaTest:.45,side:THREE.DoubleSide,depthWrite:true});
+const v24Trees=new THREE.InstancedMesh(new THREE.PlaneGeometry(1,1),v24TreeMat,trees*2);
+for(let i=0;i<trees;i++){
+ const side=i%2?-1:1,z=15-Math.floor(i/2)*37,x=side*(17.5+(i%3)*.25),height=7.2+(i%5)*.35;
+ for(let k=0;k<2;k++){
+  dummy.position.set(x,height/2,z);dummy.rotation.set(0,k*Math.PI/2,0);dummy.scale.set(height*.68,height,1);dummy.updateMatrix();v24Trees.setMatrixAt(i*2+k,dummy.matrix)
  }
- inst.count=count;inst.instanceMatrix.needsUpdate=true;inst.frustumCulled=false;scene.add(inst);shopfrontGroups.push(inst);
 }
-// Evita sobreposição das antigas vitrines geométricas e colunas sem suporte.
-v19Window.visible=false;v20Columns.visible=false;
+v24Trees.instanceMatrix.needsUpdate=true;v24Trees.frustumCulled=false;scene.add(v24Trees);v24NewInstances.push(v24Trees);
+// V25 - quarteirao piloto: modelos 3D reais em GLB (geometria com esquadrias, vitrines,
+// sacadas, telhados e janelas laterais). Nao duplicamos os edificios V24 nesse trecho.
+const v25Buildings=[];
+const v25Sites=[];
+for(let row=0;row<4;row++)for(const side of [-1,1]){
+ const z=12-row*51;
+ v25Sites.push({side,z,style:row%3});
+}
+// Ocultar somente os 8 blocos antigos do trecho de teste.
+const v25Mat=new THREE.Matrix4(),v25Pos=new THREE.Vector3(),v25Rot=new THREE.Quaternion(),v25Scale=new THREE.Vector3();
+for(let i=0;i<8;i++){
+ v24Buildings.getMatrixAt(i,v25Mat);v25Mat.decompose(v25Pos,v25Rot,v25Scale);
+ v25Scale.set(.00001,.00001,.00001);v25Mat.compose(v25Pos,v25Rot,v25Scale);v24Buildings.setMatrixAt(i,v25Mat);
+ v24Roof.getMatrixAt(i,v25Mat);v25Mat.decompose(v25Pos,v25Rot,v25Scale);
+ v25Scale.set(.00001,.00001,.00001);v25Mat.compose(v25Pos,v25Rot,v25Scale);v24Roof.setMatrixAt(i,v25Mat);
+}
+for(let style=0;style<4;style++){
+ const f=v24Faces[style];for(let i=0;i<f.count;i++){
+  f.getMatrixAt(i,v25Mat);v25Mat.decompose(v25Pos,v25Rot,v25Scale);
+  if(v25Pos.z>-170){v25Scale.set(.00001,.00001,.00001);v25Mat.compose(v25Pos,v25Rot,v25Scale);f.setMatrixAt(i,v25Mat)}
+ }f.instanceMatrix.needsUpdate=true;
+}
+v24Buildings.instanceMatrix.needsUpdate=true;v24Roof.instanceMatrix.needsUpdate=true;
+// Loader local: nao depende de servidores externos para baixar os predios.
+const v25Loader=new GLTFLoader();
+for(let style=0;style<3;style++){
+ v25Loader.load('./assets/edificio_v25_'+(style+1)+'.glb',g=>{
+  const base=g.scene;
+  for(const site of v25Sites.filter(s=>s.style===style)){
+   const clone=base.clone(true);
+   // Os modelos tem frente em -X; espelhamento rotacional para a outra margem.
+   clone.position.set(site.side*25,0,site.z);
+   clone.rotation.y=site.side===-1?0:Math.PI;
+   clone.traverse(o=>{if(o.isMesh){o.castShadow=false;o.receiveShadow=false}});
+   scene.add(clone);v25Buildings.push({obj:clone,z:site.z});
+  }
+ },undefined,e=>console.error('Falha no edificio V25',style+1,e));
+}
+// Remover marquises que pareciam flutuar: estruturas da pista mantidas, volumes soltos ocultos.
+for(const entry of [...scene.children]){
+ if(entry.isMesh&&!entry.isInstancedMesh&&entry.geometry?.type==='BoxGeometry'&&entry.position.y>8&&entry.position.x>17&&entry.geometry.parameters?.width>12&&entry.geometry.parameters?.depth>100){entry.visible=false}
+}
 
 // V16 — cenário infinito por reciclagem de instâncias, sem criar objetos durante a corrida.
 // Mantém os objetos entre 80 m atrás e 2320 m à frente do carro.
@@ -352,7 +401,7 @@ for(const obj of [...scene.children]){
  }
 }
 const worldInstanced=[];
-for(const obj of [blocks,...frontGroups,shops,trunks,canopies,leafClusters,poles,lanes,curbDetails,v19Frame,v19Balcony,v19AwningMesh,v19Window,v19Foliage,...v19Signs,...v20Instances,foliageCards,...shopfrontGroups]){
+for(const obj of [blocks,...frontGroups,shops,trunks,canopies,leafClusters,poles,lanes,curbDetails,v19Frame,v19Balcony,v19AwningMesh,v19Window,v19Foliage,...v19Signs,...v20Instances,...v24NewInstances]){
  const original=[];
  const matrix=new THREE.Matrix4();
  for(let i=0;i<obj.count;i++){
@@ -367,9 +416,12 @@ function wrappedZ(z,distance){
  return z-WORLD_PERIOD*Math.ceil((z+distance-80)/WORLD_PERIOD);
 }
 let lastWorldUpdate=-Infinity;
+// Edificios GLB participam da mesma reciclagem da cidade infinita.
+
 function updateInfiniteCity(distance){
  if(distance-lastWorldUpdate<12 && distance>=lastWorldUpdate)return;
  lastWorldUpdate=distance;
+ for(const item of v25Buildings)item.obj.position.z=wrappedZ(item.z,distance);
  for(const {obj,originalZ,long} of worldStatic){
   // Long asphalt, sidewalks and safety barriers stay centered around the car.
   if(long){obj.position.z=-distance-550;continue;}
@@ -429,7 +481,7 @@ const graph=$('graph'),ctx=graph.getContext('2d');
 function drawGraph(){
  const w=graph.width,h=graph.height,mode=$('graphType').value;
  ctx.clearRect(0,0,w,h);ctx.fillStyle='rgba(2,10,22,.35)';ctx.fillRect(0,0,w,h);
- const L=60,R=18,T=14,B=36,ww=w-L-R,hh=h-T-B;
+ const L=60,R=18,T=48,B=36,ww=w-L-R,hh=h-T-B;
  const current=samples[samples.length-1];const tmax=Math.max(10,Math.ceil((elapsed-graphOriginT+1)/5)*5);
  const vmax=Math.max(mode==='v'?10:20,Math.ceil((mode==='v'?Math.max(30,...samples.map(p=>p.v)):Math.max(100,dist-graphOriginS))*1.12/10)*10);
  ctx.font='21px Arial';ctx.lineWidth=1;
@@ -441,7 +493,7 @@ function drawGraph(){
  ctx.strokeStyle=mode==='v'?'#55e6ff':'#ffbd70';ctx.lineWidth=4;ctx.lineJoin='round';ctx.beginPath();let first=true;
  for(const p of samples){const xx=L+ww*p.t/tmax,yy=T+hh-hh*(mode==='v'?p.v:p.s)/vmax;if(first){ctx.moveTo(xx,yy);first=false}else ctx.lineTo(xx,yy)}
  if(current){const xx=L+ww*current.t/tmax,yy=T+hh-hh*(mode==='v'?current.v:current.s)/vmax;ctx.lineTo(xx,yy)}ctx.stroke();
- ctx.fillStyle='#fff';ctx.font='bold 20px Arial';ctx.textAlign='left';ctx.fillText(mode==='v'?'v (m/s)':'s (m)',7,20);
+ ctx.fillStyle='#fff';ctx.font='bold 20px Arial';ctx.textAlign='left';ctx.fillText(mode==='v'?'v (m/s)':'s (m)',L+8,27);
  $('graphCaption').textContent=mode==='v'?'Velocidade (m/s) × tempo (s)':'Posição (m) × tempo (s)';
 }
 $('graphType').addEventListener('change',drawGraph);$('graphReset').addEventListener('click',()=>{graphOriginT=elapsed;graphOriginS=dist;lastSample=elapsed;samples.length=0;samples.push({t:0,v:speed,s:0});drawGraph()});
